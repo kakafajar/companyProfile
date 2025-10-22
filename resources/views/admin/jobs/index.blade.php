@@ -22,11 +22,12 @@
                 <td>{{ $job->type }}</td>
                 <td>
                     <a href="{{ route('admin.jobs.edit', $job->id) }}" class="btn btn-sm btn-warning">Edit</a>
-                    <form action="{{ route('admin.jobs.destroy', $job->id) }}" method="POST" class="d-inline">
-                        @csrf
-                        @method('DELETE')
-                        <button class="btn btn-sm btn-danger" onclick="return confirm('Delete this job?')">Delete</button>
-                    </form>
+                <form action="{{ route('admin.jobs.destroy', $job->id) }}" method="POST" class="d-inline">
+                    @csrf
+                    @method('DELETE')
+                    <button type="button" class="btn btn-sm btn-danger btn-delete">Delete</button>
+                </form>
+
                     <a href="{{ route('admin.jobs.applications', $job->id) }}" class="btn btn-sm btn-info">View Applications</a>
                 </td>
             </tr>
