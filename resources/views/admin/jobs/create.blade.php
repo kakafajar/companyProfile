@@ -30,7 +30,34 @@
             </select>
         </div>
 
-        <button type="submit" class="btn btn-dark">Save</button>
+        <button type="button" class="btn btn-dark btn-save">Save</button>
     </form>
 </div>
 @endsection
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const saveButton = document.querySelector('.btn-save');
+    const form = document.querySelector('form');
+
+    saveButton.addEventListener('click', function() {
+        Swal.fire({
+            title: 'Yakin ingin menyimpan?',
+            text: "Pastikan data sudah benar!",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#212529',
+            cancelButtonColor: '#6c757d',
+            confirmButtonText: 'Ya, simpan!',
+            cancelButtonText: 'Batal'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                form.submit();
+            }
+        });
+    });
+});
+</script>
+@endsection
+
