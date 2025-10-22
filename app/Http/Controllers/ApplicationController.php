@@ -55,5 +55,8 @@ class ApplicationController extends Controller
         return redirect()->back()->with('error', 'CV tidak ditemukan');
     }
 
+    
+
+    // Tampilkan daftar pelamar untuk 1 job terten
 }
 
