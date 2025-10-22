@@ -1,0 +1,97 @@
+/* Navbar */
+.navbar .nav-link {
+    color: #000000;
+    margin: 0 8px;
+    font-weight: 500;
+}
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #00ff1e; /* hijau */
+}
+
+#home {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#home .bg-image {
+  z-index: -2;
+}
+#home .overlay {
+  z-index: -1;
+}
+
+
+/* Hero Section */
+#home h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+#home p {
+    font-size: 1.1rem;
+}
+
+.service-image img {
+  max-width: 90%;   /* biar nggak melebihi kolom */
+  height: auto;
+  border-radius: 20px; /* opsional kalau mau ada sudut membulat */
+  object-fit: cover;
+}
+
+.card-overlap {
+  position: relative;
+  left: 120px; /* geser dikit ke kiri */
+  z-index: 2;  /* biar selalu di atas gambar kalau overlap */
+}
+
+
+.grayscale {
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.grayscale:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+body {
+    background-color: #f8f9fa; /* sama dengan bg-light Bootstrap */
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+/* 
+@media (max-width: 768px) {
+    section {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    section .container {
+      max-width: 100% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    section .row {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  } */
+
+
+
+
+
+
