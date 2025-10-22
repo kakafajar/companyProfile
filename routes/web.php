@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\ApplicationController;
+use App\Http\Controllers\AdminDashboardController;
 
 
 /*
@@ -46,4 +47,6 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::get('/applications/{id}/cv', [ApplicationController::class, 'downloadCv'])->name('applications.downloadCv');
+
+Route::get('admin/dashboard', [AdminDashboardController:: class, 'index'])->name('admin.dashboard');
 
